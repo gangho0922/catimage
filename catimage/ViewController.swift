@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             self.collectionView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
         self.collectionView.backgroundColor = .red
-        self.collectionView.register(UICollectionViewCell.self,
+        self.collectionView.register(CatCell.self,
             forCellWithReuseIdentifier: "Cell")
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -56,9 +56,8 @@ extension ViewController : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .black
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for:
+            indexPath) as! CatCell
         return cell
     }
     
