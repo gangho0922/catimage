@@ -21,13 +21,13 @@ final class CatService {
     func getCats(
         page: Int,
         limit: Int,
-        completion: @escaping (Result<String, RequestError>) -> Void
+        completion: @escaping (Result<[CatResponse], RequestError>) -> Void
     ) {
         var components = URLComponents(string:
                                         "https://api.thecatapi.com/v1/images/search")!
         components.queryItems = [
             URLQueryItem(name: "page", value: "\(page)"),
-                URLQueryItem(name: "page", value: "\(page)")
+                URLQueryItem(name: "limit", value: "\(limit)")
         ]
         var request  = URLRequest(url: components.url!)
         request.httpMethod = "GET"

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D86C52F29795992004DDF77 /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86C52E29795992004DDF77 /* CatCell.swift */; };
 		3D86C53129795E8A004DDF77 /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D86C53029795E8A004DDF77 /* CatService.swift */; };
+		3DA17FF8297D5186005D5599 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA17FF7297D5186005D5599 /* CatViewModel.swift */; };
 		3DC59FD72978088000EE84E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC59FD62978088000EE84E7 /* AppDelegate.swift */; };
 		3DC59FD92978088000EE84E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC59FD82978088000EE84E7 /* SceneDelegate.swift */; };
 		3DC59FDB2978088000EE84E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC59FDA2978088000EE84E7 /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		3D86C52E29795992004DDF77 /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
 		3D86C53029795E8A004DDF77 /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		3DA17FF7297D5186005D5599 /* CatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewModel.swift; sourceTree = "<group>"; };
 		3DC59FD32978088000EE84E7 /* catimage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catimage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC59FD62978088000EE84E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DC59FD82978088000EE84E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				3DC59FE12978088100EE84E7 /* LaunchScreen.storyboard */,
 				3DC59FE42978088100EE84E7 /* Info.plist */,
 				3D86C53029795E8A004DDF77 /* CatService.swift */,
+				3DA17FF7297D5186005D5599 /* CatViewModel.swift */,
 			);
 			path = catimage;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				3DC59FD72978088000EE84E7 /* AppDelegate.swift in Sources */,
 				3DC59FD92978088000EE84E7 /* SceneDelegate.swift in Sources */,
 				3D86C53129795E8A004DDF77 /* CatService.swift in Sources */,
+				3DA17FF8297D5186005D5599 /* CatViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

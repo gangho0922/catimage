@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CatModelOutput {
+    
     
     private enum Matrics {
         static let inset: CGFloat = 4
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
         layout.minimumInteritemSpacing = Matrics.inset
         return cv
     }()
+    
+    private let viewModel = CatViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupView()
@@ -39,7 +43,13 @@ class ViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.reloadData()
-        
+        self.viewModel.delegate = self
+        self.viewModel.load()
+    }
+    func loadComplete() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
     }
 }
 extension ViewController : UICollectionViewDelegateFlowLayout {
@@ -52,7 +62,7 @@ extension ViewController : UICollectionViewDelegateFlowLayout {
 }
 extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return self.viewModel.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
